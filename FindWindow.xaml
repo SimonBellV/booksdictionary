@@ -1,0 +1,27 @@
+﻿<Window x:Class="BookContainer.FindWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:t="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="FindWindow" Height="207.255" Width="277.602">
+    <Grid Height="189" VerticalAlignment="Top">
+        <StackPanel HorizontalAlignment="Left" Height="173" Margin="10,10,0,0" VerticalAlignment="Top" Width="269">
+            <StackPanel Height="32" Orientation="Horizontal">
+                <Label Content="Поле поиска"/>
+                <ComboBox x:Name="FieldCB" Height="32" Width="120"/>
+            </StackPanel>
+            <StackPanel Height="32" Orientation="Horizontal">
+                <Label Content="Значение"/>
+                <TextBox x:Name="ValueTB" Height="23" TextWrapping="Wrap" Width="150"/>
+            </StackPanel>
+            
+            <StackPanel Height="32" Orientation="Horizontal">
+                <Label Content="Тип поиска"/>
+                <ComboBox x:Name="SearchTypeCB" Width="140"/>
+            </StackPanel>
+            <Button Height="32" Content="Найти" Margin="20" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

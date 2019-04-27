@@ -1,0 +1,27 @@
+﻿<Window x:Class="BookContainer.SortWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="SortWindow" Height="258.359" Width="261.987">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Height="207" Margin="10,10,0,0" VerticalAlignment="Top" Width="238">
+            <StackPanel Height="33" Orientation="Horizontal" Margin="10">
+                <Label Content="Метод"/>
+                <ComboBox x:Name="MethodCB" Width="120" SelectionChanged="MethodCB_SelectionChanged"/>
+            </StackPanel>
+            <StackPanel Height="33" Orientation="Horizontal" Margin="10">
+                <Label Content="Поле"/>
+                <ComboBox x:Name="FieldCB" Width="120"/>
+            </StackPanel>
+            <StackPanel Height="33" Orientation="Horizontal" Margin="10">
+                <Label Content="Направление"/>
+                <ComboBox x:Name="TypeCB" Width="120"/>
+            </StackPanel>
+            <Button Content="Сортировка" Height="32" Margin="10" Click="Button_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

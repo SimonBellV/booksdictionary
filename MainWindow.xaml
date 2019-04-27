@@ -4,9 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookContainer"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Menu HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="258">
+            <Button Content="Обновить таблицу" Width="220" Height="32" Margin="10" Click="Button_Click_4"/>
+            <Button Content="Загрузить данные" Width="220" Height="32" Margin="10" Click="Button_Click"/>
+            <Button Content="Сохранить данные" Width="220" Height="32" Margin="10" Click="Button_Click_1"/>
+            <Button Content="Добавить книгу" Width="220" Height="32" Margin="10" Click="Button_Click_2"/>
+            <Button Content="Сортировка" Width="220" Height="32" Margin="10" Click="Button_Click_3"/>
+            <Button Content="Поиск" Width="220" Height="32" Margin="10" Click="Button_Click_5"/>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBox x:Name="GenreTB" Width="80" Margin="5"></TextBox>
+                <Button Content="Запрос по жанру" Width="120" Height="32" Margin="10" Click="Button_Click_6"/>
+            </StackPanel>
+            
+        </Menu>
+        <DataGrid x:Name="BooksDG" AutoGenerateColumns="True" Margin="273,0,0,0" ItemsSource="{Binding DataSource.books.Library.Values}">
+        </DataGrid>
+
     </Grid>
 </Window>
